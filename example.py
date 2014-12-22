@@ -1,3 +1,15 @@
+"""
+An example of a multiple return function.
+Sometimes you just want the greatest common denominator of the two integers
+
+>>> extended_gcd(45, 99)
+9
+
+But sometimes you want more information (like for RSA)
+
+>>> values(extended_gcd(45, 99))
+GcdResult(gcd=9, bezout_coefficients=(-2, 1), quotients=(-5, -11))
+"""
 import collections
 
 from multiplereturn import *
@@ -5,12 +17,10 @@ from multiplereturn import *
 
 @multiplereturn
 def extended_gcd(a, b):
+    """Returns the greatest common denominator of its arguments, the Bezout coefficients, and the quotients
+    :param a: an integer
+    :param b: an integer
     """
-    >>> extended_gcd(45, 99)
-    9
-    >>> values(extended_gcd(45, 99)).bezout_coefficients
-    """
-    
     GcdResult = collections.namedtuple('GcdResult', ['gcd', 'bezout_coefficients', 'quotients'])
     s, old_s = 0, 1
     t, old_t = 1, 0
