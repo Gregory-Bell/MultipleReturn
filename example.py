@@ -21,7 +21,7 @@ def extended_gcd(a, b):
     :param a: an integer
     :param b: an integer
     """
-    GcdResult = collections.namedtuple('GcdResult', ['gcd', 'bezout_coefficients', 'quotients'])
+    gcd_result = collections.namedtuple('gcd_result', ['gcd', 'bezout_coefficients', 'quotients'])
     s, old_s = 0, 1
     t, old_t = 1, 0
     r, old_r = b, a
@@ -30,4 +30,4 @@ def extended_gcd(a, b):
         (old_r, r) = (r, old_r - quotient * r)
         (old_s, s) = (s, old_s - quotient * s)
         (old_t, t) = (t, old_t - quotient * t)
-    return GcdResult(old_r, (old_s, old_t), (t, -s))
+    return gcd_result(old_r, (old_s, old_t), (t, -s))

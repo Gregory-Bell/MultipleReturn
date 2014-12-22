@@ -1,9 +1,9 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='MultipleReturn',
     version='0.1.0a1',
-    packages=find_packages(),
+    packages=[''],
     url='https://github.com/Gregory-Bell/MultipleReturn`',
     license='GPLv3+',
     author='Gregory Bell',

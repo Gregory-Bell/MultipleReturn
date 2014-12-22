@@ -36,7 +36,7 @@ class multiplereturn(object):
 
 def values(multiple_return_function_call):
     """
-    Get all results from a multiple return function.
+    :param multiple_return_function_call: a function call like f(x) where f is a function decorated with @multiplereturn
     Usage:
 
     >>> f = multiplereturn(lambda : (1, 2))
