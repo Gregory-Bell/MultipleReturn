@@ -9,7 +9,7 @@ class TestSequenceFunctions(unittest.TestCase):
 
     def test_all_results_use_before_multiple_return_function_invocation(self):
         try:
-            _ = multiplereturn.all_results(0)
+            _ = multiplereturn.values(0)
         except ValueError:
             pass
         else:
@@ -17,10 +17,10 @@ class TestSequenceFunctions(unittest.TestCase):
 
     def test_all_results_use_twice_after_multiple_return_function_invocation(self):
 
-        _ = multiplereturn.all_results(self.divide(4, 2))
+        _ = multiplereturn.values(self.divide(4, 2))
 
         try:
-            _ = multiplereturn.all_results(0)
+            _ = multiplereturn.values(0)
         except ValueError:
             pass
         else:
@@ -30,7 +30,7 @@ class TestSequenceFunctions(unittest.TestCase):
         threading.Thread(target=self.divide, args=(4, 2)).run()
 
         try:
-            _ = multiplereturn.all_results(0)
+            _ = multiplereturn.values(0)
         except ValueError:
             pass
         else:

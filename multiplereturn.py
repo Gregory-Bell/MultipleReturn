@@ -12,14 +12,14 @@ class multiplereturn(object):
 
     A multiple return function returns a tuple, but the caller only recieves
     the first element of the tuple, unless it wraps the function call with
-    all_results(). The expected usage is like this:
+    values(). The expected usage is like this:
 
     >>> @multiplereturn
     ... def divide(x, y):
     ...     return x // y, x % y
     >>> divide(5, 3)
     1
-    >>> all_results(divide(5, 3))
+    >>> values(divide(5, 3))
     (1, 2)
     """
 
@@ -34,7 +34,7 @@ class multiplereturn(object):
         return result[0]
 
 
-def all_results(multiple_return_function_call):
+def values(multiple_return_function_call):
     """
     Get all results from a multiple return function.
     Usage:
@@ -42,10 +42,10 @@ def all_results(multiple_return_function_call):
     >>> f = multiplereturn(lambda : (1, 2))
     >>> f()
     1
-    >>> all_results(f())
+    >>> values(f())
     (1, 2)
     """
-    __all_results_usage_error = ValueError("all_results must be used on the result of a multiple return function")
+    __all_results_usage_error = ValueError("values must be used on the result of a multiple return function")
 
     if not hasattr(_local, "long_result"):
         raise __all_results_usage_error

@@ -5,7 +5,7 @@ An implementation of multiple return for python using the power of the `@multipl
 
 A function decorated by `@multiplereturn` that returns a tuple, will instead return the first value in the tuple.
 
-But, if the caller wraps their call with the `all_results` function, it instead returns the original tuple.
+But, if the caller wraps their call with the `values` function, it instead returns the original tuple.
 
 ```python
 import * from multiplereturn
@@ -16,5 +16,5 @@ def divide(x, y):
   return (x // y, x % y)
   
 divide(5, 3)               # returns 1
-all_results(divide(5, 3))  # returns (1, 2)
+values(divide(5, 3))  # returns (1, 2)
 ```
