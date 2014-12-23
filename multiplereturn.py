@@ -47,10 +47,10 @@ def values(multiple_return_function_call):
     """
     __all_results_usage_error = ValueError("values must be used on the result of a multiple return function")
 
-    if not hasattr(_local, "long_result"):
+    try:
+        result = _local.long_result
+    except AttributeError:
         raise __all_results_usage_error
-
-    result = _local.long_result
 
     if multiple_return_function_call != result[0]:
         raise __all_results_usage_error

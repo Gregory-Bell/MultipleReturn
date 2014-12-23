@@ -21,7 +21,7 @@ def extended_gcd(a, b):
     :param a: an integer
     :param b: an integer
     """
-    gcd_result = collections.namedtuple('gcd_result', ['gcd', 'bezout_coefficients', 'quotients'])
+    gcd_result = collections.namedtuple('GcdResult', ['gcd', 'bezout_coefficients', 'quotients'])
     s, old_s = 0, 1
     t, old_t = 1, 0
     r, old_r = b, a
