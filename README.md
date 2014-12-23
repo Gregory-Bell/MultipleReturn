@@ -3,9 +3,11 @@ MultipleReturn
 
 An implementation of multiple return for python using the power of the `@multiplereturn` decorator.
 
-A function decorated by `@multiplereturn` that returns a tuple, will instead return the first value in the tuple.
+A function that returns a tuple when decorated by `@multiplereturn` will instead return the first value in the tuple.
 
-But, if the caller wraps their call with the `values` function, it instead returns the original tuple.
+But if the caller wraps their call with the `values` function then the decorated function instead returns the original tuple.
+
+A simple example:
 
 ```python
 import * from multiplereturn
