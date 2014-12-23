@@ -15,6 +15,6 @@ def divide(x, y):
   # Returns the dividend and remainder.
   return (x // y, x % y)
   
-divide(5, 3)               # returns 1
+divide(5, 3)          # returns 1
 values(divide(5, 3))  # returns (1, 2)
 ```
