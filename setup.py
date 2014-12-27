@@ -9,7 +9,7 @@ setup(
     author='Gregory Bell',
     author_email='gregoryscottbell@gmail.com',
     description='An implementation of multiple return values.',
-    long_description=open("README.md").read(),
+    long_description=open("README").read().split("GNU")[0],
     include_package_data=True,
     classifiers=[
         'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
